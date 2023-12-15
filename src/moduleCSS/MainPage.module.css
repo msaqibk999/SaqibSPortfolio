@@ -1,0 +1,58 @@
+.navbar{
+    display: flex;
+    z-index: 99;
+    flex-direction: row;
+    width: 97vw;
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    height: 2rem;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid #a9a9a9; 
+    box-shadow:
+        0 1px 2px rgba(255, 255, 255, 0.1),
+        0 2px 4px rgba(255, 255, 255, 0.1),
+        0 4px 8px rgba(255, 255, 255, 0.1),
+        0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.nameHeader{
+    flex: 0.5;
+    font-size: 2.4rem;
+    margin-top: -0.5rem;
+    color: #a78434;
+    font-family: 'Playball', cursive;
+    cursor: pointer;
+}
+
+.nameHeader:hover{
+    color: #FFB400;
+}
+
+.navBtns{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn{
+    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    color: #8a8a8a;
+    background-color: transparent;
+}
+
+.activeBtn{
+    color: #dbdbdb;
+    font-size: 1.2rem;
+    font-weight: 550;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+.footer{
+    height: 4.5rem;
+}
