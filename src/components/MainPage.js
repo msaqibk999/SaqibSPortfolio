@@ -18,6 +18,13 @@ export default function MainPage() {
         }
       };
 
+      const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      }
+
       const handleSetActiveSection = (sectionId) => {
         setActiveSection(sectionId);
       };
@@ -55,9 +62,9 @@ export default function MainPage() {
   return (
     <>
     <div className={styles.navbar}>
-        <div className={styles.nameHeader}>Mohd Saqib</div>
+        <div className={styles.nameHeader} onClick={scrollToTop}>Mohd Saqib</div>
         <div className={styles.navBtns}>
-          <button className={`${styles.btn} ${activeSection === 'home' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('home')}>Home</button>
+          <button className={`${styles.btn} ${activeSection === 'home' ? styles.activeBtn : ''}`} onClick={() => scrollToTop()}>Home</button>
           <button className={`${styles.btn} ${activeSection === 'about' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('about')}>About</button>
           <button className={`${styles.btn} ${activeSection === 'experience' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('experience')}>Experience</button>
           <button className={`${styles.btn} ${activeSection === 'education' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('education')}>Education</button>

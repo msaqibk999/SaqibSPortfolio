@@ -1,0 +1,47 @@
+.carouselContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 6rem;
+}
+
+.carousel {
+    width: 30%;
+    overflow: hidden;
+  }
+  
+  .slidesContainer {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  }
+  
+
+  
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--body-color);
+    z-index: 1;
+  }
+  
+  .prevButton {
+    left: 30%;
+  }
+  
+  .nextButton {
+    right: 30%;
+  }

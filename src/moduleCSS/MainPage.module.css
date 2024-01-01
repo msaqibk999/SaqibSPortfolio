@@ -20,13 +20,15 @@
     flex: 0.5;
     font-size: 2.4rem;
     margin-top: -0.5rem;
-    color: #a78434;
+    color: var(--body-color);
+    opacity: 0.8;
     font-family: 'Playball', cursive;
     cursor: pointer;
 }
 
 .nameHeader:hover{
     color: #FFB400;
+    transition: 1s;
 }
 
 .navBtns{
@@ -44,13 +46,14 @@
     border: none;
     color: #8a8a8a;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .activeBtn{
-    color: #dbdbdb;
+    color: var(--body-color);
     font-size: 1.2rem;
     font-weight: 550;
-    border-bottom: 2px solid #dbdbdb;
+    border-bottom: 2px solid var(--body-color);
 }
 
 .footer{

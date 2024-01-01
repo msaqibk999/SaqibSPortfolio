@@ -3,5 +3,118 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50rem;
+    flex-direction: column;
 }
+
+.heading{
+    color: #FFB400;
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.heading::before{
+    content: 'SKILLS';
+    position: absolute;
+    width: 150%; 
+    height: 5rem; 
+    background-color: transparent; 
+    z-index: -1;
+    font-size: 8rem;
+    opacity: 0.1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subContainer{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+.skillContainer{
+    margin: 3rem 4rem;
+    color: var(--body-color);
+}
+
+.svg{
+    width: 3rem;
+    height: 3rem;
+    transform: rotate(-45deg);
+}
+
+.skill{
+    background: transparent;
+    height: 6.5rem;
+    width: 6.5rem;
+    border: 9px solid;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover{
+    transform: rotate(45deg) scale(1.1);
+}
+
+.skill1{
+    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+}
+
+.skill2{
+    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+}
+
+.skill3{
+    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+}
+
+.skill4{
+    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+}
+
+.skill5{
+    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+}
+
+.skill6{
+    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+}
+
+.skill7{
+    border-color: #ffb400 #ffb400 var(--body-color-primary) var(--body-color-primary);
+}
+
+.skill8{
+    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+}
+
+.skill9{
+    border-color: #ffb400 var(--body-color-primary) var(--body-color-primary) var(--body-color-primary);
+}
+
+.skill10{
+    border-color: #ffb400 var(--body-color-primary) var(--body-color-primary) var(--body-color-primary);
+}
+
+.skill11{
+    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+}
+
+.skill12{
+    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+}
+
+.skill13{
+    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+}
+
+  
