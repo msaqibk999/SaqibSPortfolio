@@ -42,6 +42,11 @@
     width: 10rem;
 }
 
+.swiggyImg{
+  height: 9.5rem;
+  width: 14.5rem;
+}
+
 .tech{
     display: flex;
     width: 100%;
@@ -61,7 +66,7 @@
     color: var(--body-color-secondary);
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 2rem;
+    margin: 2rem 0rem;
     padding: 0.8rem 2rem;
     box-shadow: -2px 2px 4px var(--body-color-primary);
     border-radius: 5px;
@@ -69,9 +74,8 @@
 }
 
 .btn:hover{
-    background-color: #41414161;
+    background-color: #19191961;
     color: white;
-    font-weight: 600;
     box-shadow: -2px 2px 6px var(--body-color);
 }
 

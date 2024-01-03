@@ -1,83 +1,123 @@
-// Carousel.js
-
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import styles from '../moduleCSS/Carousel.module.css';
+import React, { Children, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import styles from '../moduleCSS/Carousel.module.css'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
-const Carousel = ({ items, autoSlideInterval = 3000 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const containerRef = useRef(null);
+export default function Carousel2({children}) {
+  
+  const containerRef = useRef()  
+  const intervalRef = useRef()
+  const [current, setCurrent] = useState(1);
+  const [translateX, setTranslateX] = useState(0);
+  const slildes = useMemo(() => {
+    if(children.length > 1){
+        let items = Children.map(children, (child, index) => (
+        <li key={index} className={styles.slide}>
+            {child}
+        </li>
+        ))
 
-  const nextSlide = useCallback(() => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % (items.length + 1));
-  }, [items.length]);
+        return [
+            <li key={children.length + 1} className={styles.slide}>
+            {children[children.length - 1]}
+            </li>,
+            ...items,
+            <li key={children.length + 2} className={styles.slide}>
+            {children[0]}
+            </li>
+        ]
+    }
+
+    return <li className={styles.slide}>{children[0]}</li>
+  },[children])
+
+  useLayoutEffect(() => {
+    setTranslateX(containerRef.current.clientWidth * current)
+  },[])
+
+  const actionHandler = useCallback((mode) => {
+    containerRef.current.style.transitionDuration = "400ms"
+    if(mode === "prev"){
+        if(current <= 1){
+            setTranslateX(0);
+            setCurrent(children.length)
+        }
+        else{
+            setTranslateX(containerRef.current.clientWidth * (current - 1))
+            setCurrent((prev) => --prev)
+        }
+
+    } else if(mode === "next"){
+        if(current >= children.length){
+            setTranslateX(containerRef.current.clientWidth * (children.length + 1));
+            setCurrent(1)
+        }
+        else{
+            setTranslateX(containerRef.current.clientWidth * (current + 1))
+            setCurrent((prev) => ++prev)
+        }
+    }
+  }, [current, children])
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      nextSlide();
-    }, autoSlideInterval);
+    const transitionEnd = () => {
+        if(current <= 1) {
+            containerRef.current.style.transitionDuration = "0ms"
+            setTranslateX(containerRef.current.clientWidth * current)
+        }
+        else if(current >= children.length){
+            containerRef.current.style.transitionDuration = "0ms"
+            setTranslateX(containerRef.current.clientWidth * children.length)
+        }
+    }
+    document.addEventListener("transitionend", transitionEnd)
+    
+    return () => {
+        document.removeEventListener("transitionend", transitionEnd)
+    }
+  },[current, children])
 
-    return () => clearInterval(intervalId);
-  }, [autoSlideInterval, nextSlide]);
+  useEffect(() => {
+    if(intervalRef.current) {
+        clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+        actionHandler("next")
+    }, 3000);
+    return () => {
+        if(intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+    }
+  },[actionHandler])
 
-  const handleTransitionEnd = () => {
-    if (currentIndex === items.length) {
-      // Reset to the first item without transition
-      containerRef.current.style.transitionDuration = '0ms';
-      setCurrentIndex(0);
-
-      // Set a delay before re-enabling transition for smooth looping
-      setTimeout(() => {
-        containerRef.current.style.transitionDuration = '500ms';
-      }, 0);
+  const handleSlideHover = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
     }
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => {
-      if (prevIndex === 0) {
-        // Reset to the last item without transition
-        containerRef.current.style.transitionDuration = '0ms';
-        setCurrentIndex(items.length);
-
-        // Set a delay before re-enabling transition for smooth looping
-        setTimeout(() => {
-          containerRef.current.style.transitionDuration = '500ms';
-        }, 0);
-      }
-      return (prevIndex - 1 + items.length) % (items.length + 1);
-    });
+  const handleSlideLeave = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      actionHandler('next');
+    }, 3000);
   };
 
   return (
-    <div className={styles.carouselContainer}>
-      <div
-        ref={containerRef}
-        className={styles.carousel}
-        onTransitionEnd={handleTransitionEnd}
-      >
-        <div
-          className={styles.slidesContainer}
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className={`${styles.slide} ${index === currentIndex ? styles.active : ''}`}
-            >
-              {item}
-            </div>
-          ))}
+    <div className={styles.carousel}>
+        <div className={styles.mainContainer}>
+            <ul className={styles.container}
+                ref={containerRef}
+                onMouseEnter={handleSlideHover}
+                onMouseLeave={handleSlideLeave}
+                style={{transform: `translate3d(${-translateX}px, 0, 0)`}}>
+                    {slildes}
+            </ul>
         </div>
-      </div>
-      <button className={styles.prevButton} onClick={prevSlide}>
-        <BsChevronLeft />
-      </button>
-      <button className={styles.nextButton} onClick={nextSlide}>
-        <BsChevronRight />
-      </button>
+        <button onClick={() => actionHandler("prev")} className={`${styles.btn} ${styles.before}`}><BsChevronLeft /></button>
+        <button onClick={() => actionHandler("next")} className={`${styles.btn} ${styles.after}`}><BsChevronRight /></button>
     </div>
-  );
-};
-
-export default Carousel;
+  )
+}
