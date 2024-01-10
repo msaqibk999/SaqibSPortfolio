@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/saqibsportfolio/static/css/main.125c94b5.css",
+    "main.js": "/saqibsportfolio/static/js/main.0016ca33.js",
+    "static/js/787.e863f41a.chunk.js": "/saqibsportfolio/static/js/787.e863f41a.chunk.js",
+    "static/media/me.jpg": "/saqibsportfolio/static/media/me.6e307fade710f19d9f3d.jpg",
+    "static/media/bandage.png": "/saqibsportfolio/static/media/bandage.24d5fdd12c7ff2c09d07.png",
+    "static/media/byjus_logo.svg": "/saqibsportfolio/static/media/byjus_logo.ebf5582ff042557e8aee1d9d2cce7fe6.svg",
+    "static/media/postgresql.svg": "/saqibsportfolio/static/media/postgresql.5554dfac6639fb169614c251cd1f6bc0.svg",
+    "static/media/rails.svg": "/saqibsportfolio/static/media/rails.0a90bb86b156e040cc366eec3ef251fc.svg",
+    "static/media/reactjs.svg": "/saqibsportfolio/static/media/reactjs.e72c9ed5483656b44c338310ad3219ce.svg",
+    "static/media/aws.svg": "/saqibsportfolio/static/media/aws.23e5cd0d6f947f2565ba546d61bb4e0f.svg",
+    "static/media/nodejs.svg": "/saqibsportfolio/static/media/nodejs.51fb0cf6ccda653f867a587bb90cc9c6.svg",
+    "static/media/docker.svg": "/saqibsportfolio/static/media/docker.187f92a6f2b6a0d260fc1b02f4028aa2.svg",
+    "static/media/java.svg": "/saqibsportfolio/static/media/java.3d1f1777f72c1a4ca3003a5378491322.svg",
+    "static/media/Sun.svg": "/saqibsportfolio/static/media/Sun.681607dcda2a01539a9a8a157ae74e6e.svg",
+    "static/media/vs-code.svg": "/saqibsportfolio/static/media/vs-code.3d8fea0ed9043ed9bf421bbdb507a21e.svg",
+    "static/media/github.svg": "/saqibsportfolio/static/media/github.3e36072905872015cb2788c3e6dae314.svg",
+    "static/media/git.svg": "/saqibsportfolio/static/media/git.8ee81345da1c18b6cdb4bbe93b464810.svg",
+    "index.html": "/saqibsportfolio/index.html",
+    "static/media/Moon.svg": "/saqibsportfolio/static/media/Moon.0a6a2b75ac51157455302ddcfca385c0.svg",
+    "static/media/javascript.svg": "/saqibsportfolio/static/media/javascript.7bb08cdbe94fc2dfc1b51be8c2dae551.svg",
+    "static/media/css.svg": "/saqibsportfolio/static/media/css.315b8fdb9dbf75ae965b80bf368895cd.svg",
+    "static/media/html.svg": "/saqibsportfolio/static/media/html.0107c93943a8f415b5db64ebb0a9d12d.svg",
+    "main.125c94b5.css.map": "/saqibsportfolio/static/css/main.125c94b5.css.map",
+    "main.0016ca33.js.map": "/saqibsportfolio/static/js/main.0016ca33.js.map",
+    "787.e863f41a.chunk.js.map": "/saqibsportfolio/static/js/787.e863f41a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.125c94b5.css",
+    "static/js/main.0016ca33.js"
+  ]
+}
