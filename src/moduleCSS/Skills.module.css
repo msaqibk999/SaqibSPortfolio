@@ -4,6 +4,9 @@
     align-items: center;
     width: 100%;
     flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 5.5rem 1rem;
 }
 
 .heading{
@@ -12,7 +15,7 @@
     font-family: 'Poppins', sans-serif;
     position: relative;
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 1rem;
 }
 
 .heading::before{
@@ -28,6 +31,11 @@
     transform: translate(-50%, -50%);
 }
 
+.skillContainer{
+    margin: 3rem 4rem;
+    color: var(--body-color);
+}
+
 .subContainer{
     margin-top: 1rem;
     display: grid;
@@ -35,21 +43,19 @@
     grid-template-rows: auto auto auto auto;
 }
 
-.skillContainer{
-    margin: 3rem 4rem;
-    color: var(--body-color);
-}
-
 .svg{
-    width: 3rem;
-    height: 3rem;
+    width: 100%;
+    height: 100%;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    padding: 1.5rem;
     transform: rotate(-45deg);
 }
 
 .skill{
     background: transparent;
-    height: 6.5rem;
-    width: 6.5rem;
+    max-width: 6.5rem;
+    max-height: 6.5rem;
     border: 9px solid;
     border-radius: 50%;
     transform: rotate(45deg);
@@ -65,56 +71,62 @@
     transform: rotate(45deg) scale(1.1);
 }
 
-.skill1{
-    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
+.skill_1{
+    border-color: #ffb400 var(--body-color-primary) var(--body-color-primary) var(--body-color-primary);
 }
 
-.skill2{
-    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
-}
-
-.skill3{
-    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
-}
-
-.skill4{
-    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
-}
-
-.skill5{
-    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
-}
-
-.skill6{
-    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
-}
-
-.skill7{
+.skill_2{
     border-color: #ffb400 #ffb400 var(--body-color-primary) var(--body-color-primary);
 }
 
-.skill8{
+.skill_3{
     border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
 }
 
-.skill9{
-    border-color: #ffb400 var(--body-color-primary) var(--body-color-primary) var(--body-color-primary);
-}
+@media screen and (max-width: 1200px) {
+    .subContainer{
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto ;
+    }
+    .skillContainer{
+        margin: 2rem 3rem;
+    }
+    .skill{
+        transform: rotate(45deg) scale(0.8);
+    }
+    .skill:hover{
+        transform: rotate(45deg) scale(0.9);
+    }
+  }
 
-.skill10{
-    border-color: #ffb400 var(--body-color-primary) var(--body-color-primary) var(--body-color-primary);
-}
+@media screen and (max-width: 1024px) {
+    .mainContainer{
+        padding: 3.5rem 1rem;
+    }
+    .heading{
+        margin-top: 0.5rem;
+        font-size: 2rem;
+    }
+    .heading::before{
+        font-size: 4.5rem;
+        height: 3.4rem;
+        left: 46%;
+    }
+    .subContainer{
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+    .skillContainer{
+        margin: 0rem;
+        font-size: 0.9rem;
+        height: 9rem;
+    }
+    .skill{
+        transform: rotate(45deg) scale(0.5);
+        margin-bottom: -0.5rem;
+    }
+    .skill:hover{
+        transform: rotate(45deg) scale(0.6);
+    }
 
-.skill11{
-    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
 }
-
-.skill12{
-    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
-}
-
-.skill13{
-    border-color: #ffb400 #ffb400 #ffb400 var(--body-color-primary);
-}
-
-  

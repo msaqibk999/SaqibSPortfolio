@@ -59,9 +59,7 @@ export default function Home() {
                     <img 
                         src={src}
                         alt='img'
-                        height="100%"
-                        width="100%"
-                        style={{objectFit: "cover"}}
+                        className={styles.myImg}
                     />):(
                         <Blurhash
                             hash='LRH_rY?vUENG*J?vxGWEyYNf$RMe'
@@ -74,7 +72,7 @@ export default function Home() {
                   )}
           </div>
             <div className={styles.infoContainer}>
-            <div className={`${styles.banner} yellow`}>I'M MOHD SAQIB KHAN.</div>
+            <div className={`${styles.banner} yellow`}>I'M MOHD SAQIB KHAN</div>
             <div className={`${styles.designation}`}>Software Engineer</div>
               <div className={styles.info}>Designing the future with code, where innovation and creativity merge seamlessly.</div>
               <div className={styles.linkContainer}>

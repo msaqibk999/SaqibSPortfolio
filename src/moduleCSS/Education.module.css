@@ -4,6 +4,9 @@
     align-items: center;
     width: 100%;
     flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 5.5rem 1rem;
 }
 
 .subContainer{
@@ -11,7 +14,7 @@
     margin-top: 1rem;
 }
 
-.animContainer{
+.animeContainer{
     height: 30rem;
     flex: 1;
     overflow: hidden;
@@ -23,7 +26,7 @@
     font-family: 'Poppins', sans-serif;
     position: relative;
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 1rem;
 }
 
 .heading::before{
@@ -86,6 +89,16 @@
     font-size: 1.1rem;
 }
 
+.edu:hover .date{
+    transition: 0.3s ease-in-out;
+    color: #FFB400;
+}
+
+.edu:hover .circle{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
 .date{
     position: absolute;
     top: -0.6rem;
@@ -94,6 +107,7 @@
     left: 0;
     color: var(--body-color-secondary);
 }
+
 .date hr{
     width: 6rem;
     background-color: #FFB400;
@@ -102,3 +116,51 @@
     z-index: -1;
 }
 
+@media screen and (max-width:1000px) {
+    .mainContainer{
+        padding: 3.5rem 1rem;
+    }
+    .heading{
+        margin: 0;
+        font-size: 2rem;
+    }
+    .heading::before{
+        height: 3rem; 
+        font-size: 3.2rem;
+        left: 34%;
+        top: 31%;
+    }
+    .subContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .animeContainer{
+        width: 18rem;
+        margin-top: 1.5rem;
+    }
+    .edu{
+        padding: 1.5rem;
+        margin-left: 1.5rem;
+    }
+    .edu h1{
+        font-size: 1.1rem;
+    }
+    .edu span{
+        font-size: 1rem;
+    }
+    .edu li{
+        font-size: 0.9rem;
+    }
+    .date{
+        font-size: 1rem;
+    }
+    .date hr{
+        width: 3rem;
+    }
+    .circle{
+        width: 2rem;
+        height: 2rem;
+        left: -1rem;
+    }
+}

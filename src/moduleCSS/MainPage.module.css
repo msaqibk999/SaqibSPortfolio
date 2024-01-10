@@ -1,12 +1,13 @@
 .navbar{
     display: flex;
+    box-sizing: border-box;
     z-index: 99;
     flex-direction: row;
-    width: 97vw;
-    padding: 1.5rem;
+    width: 100vw;
+    padding: 1rem;
     position: sticky;
     top: 0;
-    height: 2rem;
+    height: fit-content;
     backdrop-filter: blur(14px);
     border-bottom: 1px solid #a9a9a9; 
     box-shadow:
@@ -16,10 +17,13 @@
         0 8px 16px rgba(255, 255, 255, 0.1);
 }
 
+.navIcon{
+    display: none;
+}
+
 .nameHeader{
     flex: 0.5;
     font-size: 2.4rem;
-    margin-top: -0.5rem;
     color: var(--body-color);
     opacity: 0.8;
     font-family: 'Playball', cursive;
@@ -57,5 +61,66 @@
 }
 
 .footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 4.5rem;
+    border-top: 1px solid #8a8a8a;
 }
+
+.footer span{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar{
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        height: 4.4rem;
+        border-top: 1px solid #a9a9a9;
+        border-bottom: none;
+    }
+    .footer{
+        display: none;
+    }
+    .nameHeader, .navText{
+        display: none;
+    }
+    .navBtns{
+        flex: auto;
+        justify-content: space-around;
+    }
+    .navIcon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+        border-radius: 50%;
+        background-color: var(--body-color-primary);
+        color: var(--body-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        padding: 0.8rem;
+        transition: 0.2s ease-in-out;
+        margin-left: 0;
+    }
+    .activeBtn{
+        font-size: 1.2rem;
+        font-weight: 550;
+        background-color: #FFB400;
+        border: none;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .navBtns button:last-child {
+        display: none;
+      }
+  }

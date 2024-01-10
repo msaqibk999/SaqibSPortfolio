@@ -37,7 +37,7 @@ export default function Experience() {
           <div className={styles.content2}>
             <section className={styles.exp2}>
               <div className={styles.exp2Container}>
-                  <div className={styles.circle2}><BsFillSuitcaseLgFill /></div>
+                  <div className={`${styles.circle} ${styles.circle2}`}><BsFillSuitcaseLgFill /></div>
                   <span className={styles.date2}><hr /> Jan, 2023 - July, 2023</span>
                   <img src={bepLogo} alt="" onClick={() => handleRedirect('https://byjusexamprep.com/')}/>
                   <h1 className={styles.designation}>Software Engineer</h1>

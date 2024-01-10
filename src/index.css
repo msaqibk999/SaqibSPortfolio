@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  box-sizing: border-box;
   background-color: var(--body-background);
   color: var(--body-color-secondary);
   font-weight: 600;
@@ -19,11 +20,13 @@ code {
  --body-color: white;
  --body-color-secondary: #8a8a8a;
  --body-color-primary: #595e62;
+ --shadow:  rgba(255, 255, 255, 0.361);
 }
 
 [data-theme="light"]{
   --body-background: white;
-  --body-color: #0b0b0b;
+  --body-color: #191919;
   --body-color-secondary: #5f5f5f;
   --body-color-primary: #adb5bd;
+  --shadow:  rgba(0, 0, 0, 0.361);
  }

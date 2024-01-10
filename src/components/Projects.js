@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import styles from '../moduleCSS/Projects.module.css'
-// import Carousel from './Carousel'
 import Carousel2 from './Carousel'
 import react from '../media/reactjs.svg'
 import rails from '../media/rails.svg'
 import node from '../media/nodejs.svg'
 import Modal from './Modal'
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Projects() {
 
@@ -23,9 +23,9 @@ export default function Projects() {
 
   const keysArray = [
         {image: "https://cdn3d.iconscout.com/3d/premium/thumb/chat-talking-5143250-4312620.png",
-          display_name: "<ChatRooms/>",
+          display_name: "<ChatRoom/>",
           techs: [react, rails],
-          name: "Chatrooms",
+          name: "Chatroom",
           link: "https://6a981bd7.chatapp-client.pages.dev/",
           desc: "Chatroom is a chat application with real-time seamless communication.",
           info: [ 
@@ -73,17 +73,30 @@ export default function Projects() {
         </div>
       ));
 
+      const handleReachMe = () => {
+        const emailAddress = 'mohdsaqibk999@gmail.com';
+        const subject = 'Inquiry from your website';
+        const body = 'Hello Mohd Saqib,\n\nI would like to get in touch with you.';
+    
+        const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(body)}`;
+    
+        window.location.href = mailtoLink;
+      };
+
   return (
     <>
       <div className={styles.mainContainer} id='projects'>
           <h1 className={styles.heading}>PROJECTS</h1>
-          {/* <Carousel items={items} autoSlideInterval={4000} />*/}
           <Carousel2>
             {items}
           </Carousel2>
           {isModalOpen && (
               <Modal isModalOpen={isModalOpen} closeModal={closeModal} modalData={modalData}/>
             )} 
+          <h2>Lets Connect :)</h2>
+          <button onClick={handleReachMe} className={styles.reachBtn}><span className={styles.btnText}>REACH ME</span><span className={styles.openIcon}><FaArrowRight /></span></button>
       </div>
     </>
   )

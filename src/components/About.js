@@ -41,7 +41,7 @@ export default function About() {
       <div className={styles.mainContainer} id='about'>
         <h1 className={styles.heading}>ABOUT ME</h1>
         <div className={styles.content}>
-        <div className={styles.animContainer} ref={animContainer1}></div>
+        <div className={`${styles.animContainer} ${styles.anime1}`} ref={animContainer1}></div>
           <div className={styles.info}>
             <h2 className={styles.tableHead}>PERSONAL INFOS</h2>
             <table className={styles.table}>
@@ -65,7 +65,7 @@ export default function About() {
               <li>Building RESTful APIs in NodeJS & Rails Framework</li>
             </ul>
           </div>
-          <div className={styles.animContainer} ref={animContainer2}></div>
+          <div className={`${styles.animContainer} ${styles.anime2}`} ref={animContainer2}></div>
         </div>
       </div>
   );

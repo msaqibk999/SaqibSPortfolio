@@ -21,7 +21,7 @@ export default function Education() {
       <div className={styles.mainContainer} id='education'>
         <h1 className={styles.heading}>Education</h1>
         <div className={styles.subContainer}>
-          <div className={styles.animContainer} ref={animContainer}></div>
+          <div className={styles.animeContainer} ref={animContainer}></div>
           <section className={styles.info}>
               <div className={styles.edu}>
                 <div className={styles.circle}><FaUniversity /></div>

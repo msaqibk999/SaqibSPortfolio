@@ -5,6 +5,9 @@
     width: 100%;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 5.5rem 1rem;
 }
 
 .heading{
@@ -13,7 +16,7 @@
     font-family: 'Poppins', sans-serif;
     position: relative;
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 1rem;
 }
 
 .heading::before{
@@ -37,14 +40,19 @@
     flex-direction: column;
 }
 
+.window:hover h1{
+  transition: 0.3s ease-in-out;
+  color: var(--body-color);
+}
+
 .itemImg{
     height: 10rem;
     width: 10rem;
 }
 
 .swiggyImg{
-  height: 9.5rem;
-  width: 14.5rem;
+  height: 10.5rem;
+  width: 19.5rem;
 }
 
 .tech{
@@ -81,7 +89,7 @@
 
 .modal {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     right: 50%;
     display: flex;
@@ -140,3 +148,148 @@
     cursor: pointer;
     margin-right: 1rem;
   }
+
+  .mainContainer h2{
+    color: var(--body-color);
+    font-size: 3rem;
+    margin: 5rem 0 2.3rem 0;
+  }
+
+.openIcon{
+    position: absolute;
+    background-color: #FFB400;
+    padding: 1.1rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    right: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnText{
+  font-size: 1.1rem;
+  font-weight: 550;
+  margin-left: 2.4rem;
+  background-color: transparent;
+}
+
+.reachBtn{
+  display: flex;
+  height: 3.5rem;
+  width: 14rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1.8rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--body-color);
+  border: 2px solid #FFB400;
+  position: relative;
+  transition: background-position 0.3s ease-in-out; 
+  overflow: hidden;
+}
+
+.reachBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #FFB400 100%, transparent 50%);
+    transition: left 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.reachBtn:hover::before {
+    left: 0;
+}
+
+.reachBtn:hover {
+    transition: 0.3s ease-in-out;
+    color: white;
+}
+
+@media screen and (max-width:1024px) {
+  .mainContainer{
+    margin-top: 1.5rem;
+    padding: 3.5rem 1rem 9rem 1rem;
+  }
+  .heading{
+    margin-top: 0rem;
+    font-size: 2rem;
+  }
+  .heading::before{
+    font-size: 3.5rem;
+    left: 37%;
+    height: 3rem;
+  }
+  .mainContainer h2{
+    color: var(--body-color);
+    font-size: 1.8rem;
+    margin: 2rem 0 1.8rem 0;
+  }
+  .reachBtn{
+    width: 10.5rem;
+    height: 3rem;
+  }
+  .btnText{
+    font-size: 0.9rem;
+    margin-left: 1.5rem;
+  }
+  .openIcon{
+    font-size: 1rem;
+    padding: 0.88rem;
+  }
+  .itemImg{
+    height: 6rem;
+    width: 6rem;
+  }
+  .swiggyImg{
+    height: 6.5rem;
+    width: 11.5rem;
+  }
+  .window h1{
+    font-size: 1.3rem;
+  }
+  .techImg{
+    height: 1.8rem;
+    width: 1.8rem;
+    padding: 1rem;
+  }
+  .btn{
+    font-size: 0.8rem;
+    margin: 2rem 0rem;
+    padding: 0.8rem 2rem;
+  }
+  .modal {
+    padding: 2rem 1rem;
+    width: 80%;
+  }
+
+  .modal h1{
+    font-size: 1.4rem;
+  }
+
+  .modal span{
+    font-size: 1rem;
+  }
+
+  .modal ul{
+    margin: 1rem 0.6rem 1rem 0rem;
+    font-size: 0.9rem;
+  }
+  
+  .modal li{
+    margin-top: 1rem;
+  }
+
+  .link{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+}

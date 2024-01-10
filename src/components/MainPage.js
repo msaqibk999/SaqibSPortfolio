@@ -6,6 +6,15 @@ import Education from './Education'
 import Skills from './Skills'
 import Projects from './Projects'
 import styles from '../moduleCSS/MainPage.module.css'
+import { IoLocationSharp } from "react-icons/io5";
+import { IoMdMail } from "react-icons/io";
+import { HiHome } from "react-icons/hi2";
+import { MdOutlinePermIdentity } from "react-icons/md";
+import { GiOfficeChair } from "react-icons/gi";
+import { FaUniversity } from "react-icons/fa";
+import { GiSkills } from "react-icons/gi";
+import { GrProjects } from "react-icons/gr";
+
 
 export default function MainPage() {
 
@@ -64,12 +73,30 @@ export default function MainPage() {
     <div className={styles.navbar}>
         <div className={styles.nameHeader} onClick={scrollToTop}>Mohd Saqib</div>
         <div className={styles.navBtns}>
-          <button className={`${styles.btn} ${activeSection === 'home' ? styles.activeBtn : ''}`} onClick={() => scrollToTop()}>Home</button>
-          <button className={`${styles.btn} ${activeSection === 'about' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('about')}>About</button>
-          <button className={`${styles.btn} ${activeSection === 'experience' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('experience')}>Experience</button>
-          <button className={`${styles.btn} ${activeSection === 'education' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('education')}>Education</button>
-          <button className={`${styles.btn} ${activeSection === 'skills' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('skills')}>Skills</button>
-          <button className={`${styles.btn} ${activeSection === 'projects' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('projects')}>Projects</button>
+          <button className={`${styles.btn} ${activeSection === 'home' ? styles.activeBtn : ''}`} onClick={() => scrollToTop()}>
+            <span className={styles.navText}>Home</span>
+            <span className={styles.navIcon}><HiHome/></span>
+          </button>
+          <button className={`${styles.btn} ${activeSection === 'about' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('about')}>
+            <span className={styles.navText}>About</span>
+            <span className={styles.navIcon}><MdOutlinePermIdentity/></span>
+          </button>
+          <button className={`${styles.btn} ${activeSection === 'experience' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('experience')}>
+            <span className={styles.navText}>Experience</span>
+            <span className={styles.navIcon}><GiOfficeChair/></span>
+          </button>
+          <button className={`${styles.btn} ${activeSection === 'education' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('education')}>
+            <span className={styles.navText}>Education</span>
+            <span className={styles.navIcon}><FaUniversity/></span>
+          </button>
+          <button className={`${styles.btn} ${activeSection === 'skills' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('skills')}>
+            <span className={styles.navText}>Skills</span>
+            <span className={styles.navIcon}><GiSkills/></span>
+          </button>
+          <button className={`${styles.btn} ${activeSection === 'projects' ? styles.activeBtn : ''}`} onClick={() => scrollToSection('projects')}>
+            <span className={styles.navText}>Projects</span>
+            <span className={styles.navIcon}><GrProjects/></span>
+          </button>
         </div>
         
     </div>
@@ -82,7 +109,8 @@ export default function MainPage() {
         <Projects />
     </div>
     <div className={styles.footer}>
-
+        <span><IoLocationSharp />&nbsp;India</span>
+        <span><IoMdMail />&nbsp;mohdsaqibk999@gmail.com</span>
     </div>
     </>
   )
