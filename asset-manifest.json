@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/saqibsportfolio/static/css/main.125c94b5.css",
-    "main.js": "/saqibsportfolio/static/js/main.0016ca33.js",
+    "main.css": "/saqibsportfolio/static/css/main.a09004de.css",
+    "main.js": "/saqibsportfolio/static/js/main.05957281.js",
     "static/js/787.e863f41a.chunk.js": "/saqibsportfolio/static/js/787.e863f41a.chunk.js",
     "static/media/me.jpg": "/saqibsportfolio/static/media/me.6e307fade710f19d9f3d.jpg",
-    "static/media/bandage.png": "/saqibsportfolio/static/media/bandage.24d5fdd12c7ff2c09d07.png",
+    "static/media/bandageLogo.png": "/saqibsportfolio/static/media/bandageLogo.6ac08de127c269d17413.png",
     "static/media/byjus_logo.svg": "/saqibsportfolio/static/media/byjus_logo.ebf5582ff042557e8aee1d9d2cce7fe6.svg",
     "static/media/postgresql.svg": "/saqibsportfolio/static/media/postgresql.5554dfac6639fb169614c251cd1f6bc0.svg",
     "static/media/rails.svg": "/saqibsportfolio/static/media/rails.0a90bb86b156e040cc366eec3ef251fc.svg",
@@ -22,12 +22,12 @@
     "static/media/javascript.svg": "/saqibsportfolio/static/media/javascript.7bb08cdbe94fc2dfc1b51be8c2dae551.svg",
     "static/media/css.svg": "/saqibsportfolio/static/media/css.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/html.svg": "/saqibsportfolio/static/media/html.0107c93943a8f415b5db64ebb0a9d12d.svg",
-    "main.125c94b5.css.map": "/saqibsportfolio/static/css/main.125c94b5.css.map",
-    "main.0016ca33.js.map": "/saqibsportfolio/static/js/main.0016ca33.js.map",
+    "main.a09004de.css.map": "/saqibsportfolio/static/css/main.a09004de.css.map",
+    "main.05957281.js.map": "/saqibsportfolio/static/js/main.05957281.js.map",
     "787.e863f41a.chunk.js.map": "/saqibsportfolio/static/js/787.e863f41a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.125c94b5.css",
-    "static/js/main.0016ca33.js"
+    "static/css/main.a09004de.css",
+    "static/js/main.05957281.js"
   ]
 }
