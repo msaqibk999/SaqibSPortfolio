@@ -27,15 +27,29 @@ export default function About() {
 
   }, [])
 
-  const handleDownload = () => {
-    const documentPath = '/MohdSaqibResume.pdf';
-    const link = document.createElement('a');
-    link.href = documentPath;
-    link.download = 'Saqib\'sCV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = async () => {
+    try {
+      const documentPath = process.env.PUBLIC_URL + '/MohdSaqibResume.pdf';
+  
+      const response = await fetch(documentPath);
+      const blob = await response.blob();
+  
+      const link = document.createElement('a');
+      const objectURL = window.URL.createObjectURL(blob);
+  
+      link.href = objectURL;
+      link.download = 'Saqib\'sCV.pdf';
+  
+      document.body.appendChild(link);
+      link.click();
+  
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(objectURL);
+    } catch (error) {
+      console.error('Download failed:', error);
+    }
   };
+  
 
   return (
       <div className={styles.mainContainer} id='about'>

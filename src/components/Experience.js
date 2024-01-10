@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '../moduleCSS/Experience.module.css'
 import { BsFillSuitcaseLgFill } from "react-icons/bs";
-import bepLogo from '../media/BEP.png'
 import {ReactComponent as ByjusLogo} from "../media/byjus_logo.svg"
 import openLink from '../helpers/openLink';
 
@@ -39,7 +38,8 @@ export default function Experience() {
               <div className={styles.exp2Container}>
                   <div className={`${styles.circle} ${styles.circle2}`}><BsFillSuitcaseLgFill /></div>
                   <span className={styles.date2}><hr /> Jan, 2023 - July, 2023</span>
-                  <img src={bepLogo} alt="" onClick={() => handleRedirect('https://byjusexamprep.com/')}/>
+                  <img src="https://grdp.co/cdn-cgi/image/width=145,height=40,quality=80,f=auto/https://gs-post-images.grdp.co/2021/9/group-img1630501108025-27.png-rs-high-webp.png"
+                       alt="Byjus Exam Prep" onClick={() => handleRedirect('https://byjusexamprep.com/')}/>
                   <h1 className={styles.designation}>Software Engineer</h1>
                   <ul>
                     <li><b>Funnel Optimization and CAT college predictor:</b> Optimized funnels and applied new user engagement strategies, resulting in a substantial 15% increase in lead generation.</li>

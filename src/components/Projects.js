@@ -34,7 +34,7 @@ export default function Projects() {
             "Optimized notification efficiency by integrating Rails' Sidekiq, achieving a notable 35% improvement in message delivery response times."      
           ]
           },
-        {image: require('../media/bandage.png'),
+        {image: require('../media/bandageLogo.png'),
           display_name: "<Bandage Shopping/>",
           techs: [react, node],
           name: "Bandage Shopping",
@@ -50,19 +50,18 @@ export default function Projects() {
           display_name: "<Swiggy Landing Page Clone/>",
           techs: [react],
           name: "Swiggy Landing Page Clone",
-          desc: "\"Bandage\", is a E-commerce hub for clothing and accessories.",
+          link: "https://msaqibk999.github.io/swiggylandingpage/",
+          desc: "\"Swiggy Landing Page Clone\", is a clone of landing page of online food ordering website Swiggy.",
           info: [
-            "Created the application from the ground up, utilizing a tech stack that included ReactJS, NodeJS, ExpressJS, and PostgreSQL.",
+            "Created the application from the ground up, utilizing ReactJS.",
             "Ensured an impeccable user experience with seamless responsiveness across mobile, tablet, and web interfaces.",
-            "Seamlessly integrated secure user authentication via JSON Web Tokens JWT, bolstering user data protection.",
-            "Integrated Firebase for user-friendly profile picture management, enabling effortless uploads and updates."
           ]
           }
       ];
   
       const items = keysArray.map((item, index) => (
         <div key={index} className={styles.window}>
-          <img src={item.image} alt='' className={`${item.name === "Swiggy Landing Page Clone" ? styles.swiggyImg : styles.itemImg}`} />
+          <img src={item.image} alt='' className={`${item.name === "Swiggy Landing Page Clone" ? styles.swiggyImg : item.name === "Bandage Shopping" ? styles.bandageImg : styles.itemImg}`} />
           <h1>{item.display_name}</h1>
           <div className={styles.tech}>
             {item.techs.map((tech, key) => (

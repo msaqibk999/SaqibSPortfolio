@@ -51,8 +51,13 @@
 }
 
 .swiggyImg{
-  height: 10.5rem;
-  width: 19.5rem;
+  height: 10rem;
+  width: 18.5rem;
+}
+
+.bandageImg{
+  width: 7rem;
+  height: 10rem;
 }
 
 .tech{
@@ -248,8 +253,12 @@
     width: 6rem;
   }
   .swiggyImg{
-    height: 6.5rem;
-    width: 11.5rem;
+    height: 6rem;
+    width: 10.5rem;
+  }
+  .bandageImg{
+    width: 4.4rem;
+    height: 6rem;
   }
   .window h1{
     font-size: 1.3rem;
@@ -265,7 +274,7 @@
     padding: 0.8rem 2rem;
   }
   .modal {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
     width: 80%;
   }
 
