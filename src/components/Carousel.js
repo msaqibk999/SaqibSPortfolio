@@ -32,6 +32,7 @@ export default function Carousel2({children}) {
 
   useLayoutEffect(() => {
     setTranslateX(containerRef.current.clientWidth * current)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   const actionHandler = useCallback((mode) => {

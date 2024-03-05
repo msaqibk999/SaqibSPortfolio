@@ -38,6 +38,7 @@ export default function Projects() {
           display_name: "<Bandage Shopping/>",
           techs: [react, node],
           name: "Bandage Shopping",
+          link: "https://53058f88.bandageshopping.pages.dev/",
           desc: "\"Bandage\", is a E-commerce hub for clothing and accessories.",
           info: [
             "Created the application from the ground up, utilizing a tech stack that included ReactJS, NodeJS, ExpressJS, and PostgreSQL.",

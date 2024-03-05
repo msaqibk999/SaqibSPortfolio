@@ -14,7 +14,7 @@ import { GiOfficeChair } from "react-icons/gi";
 import { FaUniversity } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
 import { GrProjects } from "react-icons/gr";
-
+import { Reveal } from './Reveal'
 
 export default function MainPage() {
 
@@ -101,12 +101,12 @@ export default function MainPage() {
         
     </div>
     <div className={styles.componentsContainer}>
-        <Home />
-        <About />
-        <Experience />
-        <Education />
-        <Skills />
-        <Projects />
+        <div><Home /></div>
+        <Reveal duration={0.5}><About /></Reveal>
+        <Reveal duration={0.5}><Experience /></Reveal>
+        <Reveal duration={0.5}><Education /></Reveal>
+        <Reveal duration={0.5}><Skills /></Reveal>
+        <Reveal duration={0.5}><Projects /></Reveal>
     </div>
     <div className={styles.footer}>
         <span><IoLocationSharp />&nbsp;India</span>

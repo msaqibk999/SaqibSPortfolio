@@ -2,6 +2,7 @@ import React,{useEffect, useRef} from 'react';
 import styles from '../moduleCSS/About.module.css';
 import { FaDownload } from "react-icons/fa";
 import Lottie from 'lottie-web';
+import { Reveal } from './Reveal';
 
 export default function About() {
 
@@ -60,23 +61,23 @@ export default function About() {
             <h2 className={styles.tableHead}>PERSONAL INFOS</h2>
             <table className={styles.table}>
               <tbody>
-                <tr className={styles.label}><td className={styles.label}>Name:</td><td className={styles.data}>Mohd Saqib</td></tr>
-                <tr><td className={styles.label}>Age:</td><td className={styles.data}>23 years</td></tr>
-                <tr><td className={styles.label}>Phone:</td><td className={styles.data}>+91-9319319595</td></tr>
-                <tr><td className={styles.label}>Nationality:</td><td className={styles.data}>Indian</td></tr>
-                <tr><td className={styles.label}>Languages:</td><td className={styles.data}>English, Hindi, Arabic</td></tr>
-                <tr><td className={styles.label}>Address:</td><td className={styles.data}>Saharanpur, Uttar Pradesh</td></tr>
+                <tr className={styles.label}><td className={styles.label}>Name:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>Mohd Saqib</Reveal></td></tr>
+                <tr><td className={styles.label}>Age:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>23 years</Reveal></td></tr>
+                <tr><td className={styles.label}>Phone:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>+91-9319319595</Reveal></td></tr>
+                <tr><td className={styles.label}>Nationality:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>Indian</Reveal></td></tr>
+                <tr><td className={styles.label}>Languages:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>English, Hindi, Arabic</Reveal></td></tr>
+                <tr><td className={styles.label}>Address:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>Saharanpur, Uttar Pradesh</Reveal></td></tr>
               </tbody>
             </table>
             <button onClick={handleDownload} className={styles.downloadBtn}><span className={styles.btnText}>DOWNLOAD CV</span><span className={styles.downIcon}><FaDownload /></span></button>
           </div>
           <div className={styles.about}>
             <h2 className={styles.tableHead}>What I do?</h2>
-            <span className={styles.label}>"Coding on the server, styling on the client, and turning caffeine into code – I'm the Full Stack Wizard weaving digital dreams into reality✨"</span>
+              <Reveal isSlider={true} width='fit-content'><span className={styles.label}>"Coding on the server, styling on the client, and turning caffeine into code – I'm the Full Stack Wizard weaving digital dreams into reality✨"</span></Reveal>
             <ul>
-              <li>Build Single Page Applications in React/Next.js</li>
-              <li>Rich UI pages for better user experice in React/Next.js</li>
-              <li>Building RESTful APIs in NodeJS & Rails Framework</li>
+              <Reveal isSlider={true} width='fit-content'><li>Build Single Page Applications in React/Next.js</li></Reveal>
+              <Reveal isSlider={true} width='fit-content'><li>Rich UI pages for better user experice in React/Next.js</li></Reveal>
+              <Reveal isSlider={true} width='fit-content'><li>Building RESTful APIs in NodeJS & Rails Framework</li></Reveal>
             </ul>
           </div>
           <div className={`${styles.animContainer} ${styles.anime2}`} ref={animContainer2}></div>
