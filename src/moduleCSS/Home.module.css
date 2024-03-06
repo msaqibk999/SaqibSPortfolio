@@ -168,9 +168,10 @@
 }
 
 .dark_mode {
-    position: absolute;
+    position: fixed;
     right: 10rem;
-    top: 2rem
+    top: 6rem;
+    z-index: 98;
 }
 
 .dark_mode_label {

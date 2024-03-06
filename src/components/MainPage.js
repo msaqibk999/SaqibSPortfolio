@@ -46,14 +46,8 @@ export default function MainPage() {
             const section = document.getElementById(sectionId);
             if (section) {
               const rect = section.getBoundingClientRect();
-      
-              // Define a threshold as a percentage of the viewport height
-              const threshold = 0.5; // Adjust as needed (e.g., 0.5 for center)
-      
-              // Calculate the boundary line based on the threshold
+              const threshold = 0.5;
               const boundaryLine = windowHeight * threshold;
-      
-              // Check if the section is centered within the threshold
               if (Math.abs(rect.top - windowHeight / 2) <= boundaryLine) {
                 handleSetActiveSection(sectionId);
                 break;

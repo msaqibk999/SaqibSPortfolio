@@ -7,12 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -39,31 +33,4 @@
 
 .yellow{
  color: #FFB400;
-}
-
-@keyframes moveUp {
-  0%, 25% {
-    transform: translateY(-5rem);
-  }
-  50%, 75% {
-    transform: translateY(8rem);
-  }
-  100% {
-    transform: translateY(4.5rem);
-  }
-}
-
-#lines {
-  animation: moveUp 2s linear infinite;
-}
-
-::backdrop {
-  background-image: linear-gradient(
-    45deg,
-    magenta,
-    rebeccapurple,
-    dodgerblue,
-    green
-  );
-  opacity: 0.75;
 }
