@@ -1,10 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
 import Home from './Home'
-import About from './About'
-import Experience from './Experience'
-import Education from './Education'
-import Skills from './Skills'
-import Projects from './Projects'
 import styles from '../moduleCSS/MainPage.module.css'
 import { IoLocationSharp } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
@@ -15,6 +10,16 @@ import { FaUniversity } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
 import { GrProjects } from "react-icons/gr";
 import { Reveal } from './Reveal'
+import {ReactComponent as Loading} from '../media/bouncing-circles.svg'
+
+
+const About = React.lazy(() => import('./About'));
+const Experience = React.lazy(() => import('./Experience'));
+const Education = React.lazy(() => import('./Education'));
+const Skills = React.lazy(() => import('./Skills'));
+const Projects = React.lazy(() => import('./Projects'));
+
+
 
 export default function MainPage() {
 
@@ -96,11 +101,13 @@ export default function MainPage() {
     </div>
     <div className={styles.componentsContainer}>
         <div><Home /></div>
-        <Reveal duration={0.5}><About /></Reveal>
-        <Reveal duration={0.5}><Experience /></Reveal>
-        <Reveal duration={0.5}><Education /></Reveal>
-        <Reveal duration={0.5}><Skills /></Reveal>
-        <Reveal duration={0.5}><Projects /></Reveal>
+        <Suspense fallback={<Loading className={styles.loading}/>}>
+          <Reveal duration={0.5}><About /></Reveal>
+          <Reveal duration={0.5}><Experience /></Reveal>
+          <Reveal duration={0.5}><Education /></Reveal>
+          <Reveal duration={0.5}><Skills /></Reveal>
+          <Reveal duration={0.5}><Projects /></Reveal>
+        </Suspense>
     </div>
     <div className={styles.footer}>
         <span><IoLocationSharp />&nbsp;India</span>
