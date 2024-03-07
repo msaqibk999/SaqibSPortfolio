@@ -1,40 +1,44 @@
-import React,{useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from '../moduleCSS/About.module.css';
-import { FaDownload } from "react-icons/fa";
 import Lottie from 'lottie-web';
 import { Reveal } from './Reveal';
+import { FaDownload } from 'react-icons/fa';
+
+const personalInfo = {
+  name: 'Mohd Saqib',
+  age: '23 years',
+  phone: '+91-9319319595',
+  nationality: 'Indian',
+  languages: 'English, Hindi, Arabic',
+  address: 'Saharanpur, Uttar Pradesh',
+};
+
+const aboutText = `"Coding on the server, styling on the client, and turning caffeine into code – I'm the Full Stack Wizard weaving digital dreams into reality✨"`;
 
 export default function About() {
-
   const animContainer1 = useRef(null);
   const animContainer2 = useRef(null);
 
   useEffect(() => {
-    Lottie.loadAnimation({
-      container: animContainer1.current,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: require('../media/skills.json')
-    });
+    const loadAnimation = (container, animationData) => {
+      Lottie.loadAnimation({
+        container,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData,
+      });
+    };
 
-    Lottie.loadAnimation({
-      container: animContainer2.current,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      animationData: require('../media/webdev.json')
-    })
-
-  }, [])
+    loadAnimation(animContainer1.current, require('../media/skills.json'));
+    loadAnimation(animContainer2.current, require('../media/webdev.json'));
+  }, []);
 
   const handleDownload = async () => {
     try {
       const documentPath = process.env.PUBLIC_URL + '/MohdSaqibResume.pdf';
-  
       const response = await fetch(documentPath);
       const blob = await response.blob();
-  
       const link = document.createElement('a');
       const objectURL = window.URL.createObjectURL(blob);
   
@@ -50,38 +54,44 @@ export default function About() {
       console.error('Download failed:', error);
     }
   };
-  
 
   return (
-      <div className={styles.mainContainer} id='about'>
-        <h1 className={styles.heading}>ABOUT ME</h1>
-        <div className={styles.content}>
+    <div className={styles.mainContainer} id='about'>
+      <h1 className={styles.heading}>ABOUT ME</h1>
+      <div className={styles.content}>
         <div className={`${styles.animContainer} ${styles.anime1}`} ref={animContainer1}></div>
-          <div className={styles.info}>
-            <h2 className={styles.tableHead}>PERSONAL INFOS</h2>
-            <table className={styles.table}>
-              <tbody>
-                <tr className={styles.label}><td className={styles.label}>Name:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>Mohd Saqib</Reveal></td></tr>
-                <tr><td className={styles.label}>Age:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>23 years</Reveal></td></tr>
-                <tr><td className={styles.label}>Phone:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>+91-9319319595</Reveal></td></tr>
-                <tr><td className={styles.label}>Nationality:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>Indian</Reveal></td></tr>
-                <tr><td className={styles.label}>Languages:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>English, Hindi, Arabic</Reveal></td></tr>
-                <tr><td className={styles.label}>Address:</td><td className={styles.data}><Reveal isSlider={true} width='fit-content'>Saharanpur, Uttar Pradesh</Reveal></td></tr>
-              </tbody>
-            </table>
-            <button onClick={handleDownload} className={styles.downloadBtn}><span className={styles.btnText}>DOWNLOAD CV</span><span className={styles.downIcon}><FaDownload /></span></button>
-          </div>
-          <div className={styles.about}>
-            <h2 className={styles.tableHead}>What I do?</h2>
-              <Reveal isSlider={true} width='fit-content'><span className={styles.label}>"Coding on the server, styling on the client, and turning caffeine into code – I'm the Full Stack Wizard weaving digital dreams into reality✨"</span></Reveal>
-            <ul>
-              <Reveal isSlider={true} width='fit-content'><li>Build Single Page Applications in React/Next.js</li></Reveal>
-              <Reveal isSlider={true} width='fit-content'><li>Rich UI pages for better user experice in React/Next.js</li></Reveal>
-              <Reveal isSlider={true} width='fit-content'><li>Building RESTful APIs in NodeJS & Rails Framework</li></Reveal>
-            </ul>
-          </div>
-          <div className={`${styles.animContainer} ${styles.anime2}`} ref={animContainer2}></div>
+        <div className={styles.info}>
+          <h2 className={styles.tableHead}>PERSONAL INFOS</h2>
+          <table className={styles.table}>
+            <tbody>
+              {Object.entries(personalInfo).map(([label, value]) => (
+                <tr key={label} className={styles.label}>
+                  <td>{label.charAt(0).toUpperCase() + label.slice(1)}:</td>
+                  <td>
+                    <Reveal isSlider={true} width='fit-content'>{value}</Reveal>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <button onClick={handleDownload} className={styles.downloadBtn}>
+            <span className={styles.btnText}>DOWNLOAD CV</span>
+            <span className={styles.downIcon}><FaDownload /></span>
+          </button>
         </div>
+        <div className={styles.about}>
+          <h2 className={styles.tableHead}>What I do?</h2>
+          <Reveal isSlider={true} width='fit-content'><span className={styles.label}>{aboutText}</span></Reveal>
+          <ul>
+            {['Build Single Page Applications in React/Next.js', 'Rich UI pages for better user experience in React/Next.js', 'Building RESTful APIs in NodeJS & Rails Framework'].map((text, index) => (
+              <li key={index}>
+                <Reveal isSlider={true} width='fit-content'>{text}</Reveal>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={`${styles.animContainer} ${styles.anime2}`} ref={animContainer2}></div>
       </div>
+    </div>
   );
 }

@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import styles from '../moduleCSS/Projects.module.css'
 import Carousel2 from './Carousel'
-import react from '../media/reactjs.svg'
-import rails from '../media/rails.svg'
-import node from '../media/nodejs.svg'
+import react from '../media/skills/ReactLogo.svg'
+import rails from '../media/skills/RailsLogo.svg'
+import node from '../media/skills/NodeLogo.svg'
 import Modal from './Modal'
 import { FaArrowRight } from "react-icons/fa6";
 
