@@ -26,7 +26,7 @@ export default function Projects() {
           display_name: "<ChatRoom/>",
           techs: [react, rails],
           name: "Chatroom",
-          link: "https://6a981bd7.chatapp-client.pages.dev/",
+          link: "https://chatapp-client.pages.dev/",
           desc: "Chatroom is a chat application with real-time seamless communication.",
           info: [ 
             "Crafted the client-side using ReactJS and the server-side with Ruby on Rails and PostgreSQL.",
@@ -38,7 +38,7 @@ export default function Projects() {
           display_name: "<Bandage Shopping/>",
           techs: [react, node],
           name: "Bandage Shopping",
-          link: "https://53058f88.bandageshopping.pages.dev/",
+          link: "https://bandageshopping.pages.dev/",
           desc: "\"Bandage\", is a E-commerce hub for clothing and accessories.",
           info: [
             "Created the application from the ground up, utilizing a tech stack that included ReactJS, NodeJS, ExpressJS, and PostgreSQL.",
