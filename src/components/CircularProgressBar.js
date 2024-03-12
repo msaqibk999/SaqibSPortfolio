@@ -13,7 +13,6 @@ export const CircularProgressBar = ({children, progressEndValue, speed , skill})
             setVisible(true);
         }
       })
-      console.log(isVisible)
       observer.observe(progressBarRef.current)
       if(isVisible){
         const progress = setInterval(() => {
