@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/saqibsportfolio/static/css/main.e91cc97a.css",
-    "main.js": "/saqibsportfolio/static/js/main.839bdddb.js",
+    "main.js": "/saqibsportfolio/static/js/main.990c821c.js",
     "static/css/283.26d12fc5.chunk.css": "/saqibsportfolio/static/css/283.26d12fc5.chunk.css",
     "static/js/283.bce83b89.chunk.js": "/saqibsportfolio/static/js/283.bce83b89.chunk.js",
     "static/css/593.4317e157.chunk.css": "/saqibsportfolio/static/css/593.4317e157.chunk.css",
@@ -11,7 +11,7 @@
     "static/css/492.778c1b3c.chunk.css": "/saqibsportfolio/static/css/492.778c1b3c.chunk.css",
     "static/js/492.89c94fe9.chunk.js": "/saqibsportfolio/static/js/492.89c94fe9.chunk.js",
     "static/css/862.c66aaa80.chunk.css": "/saqibsportfolio/static/css/862.c66aaa80.chunk.css",
-    "static/js/862.956aabda.chunk.js": "/saqibsportfolio/static/js/862.956aabda.chunk.js",
+    "static/js/862.62e97248.chunk.js": "/saqibsportfolio/static/js/862.62e97248.chunk.js",
     "static/js/453.848906bf.chunk.js": "/saqibsportfolio/static/js/453.848906bf.chunk.js",
     "static/js/127.b39865cd.chunk.js": "/saqibsportfolio/static/js/127.b39865cd.chunk.js",
     "static/js/302.b92d8729.chunk.js": "/saqibsportfolio/static/js/302.b92d8729.chunk.js",
@@ -37,7 +37,7 @@
     "static/media/CssLogo.svg": "/saqibsportfolio/static/media/CssLogo.315b8fdb9dbf75ae965b80bf368895cd.svg",
     "static/media/HtmlLogo.svg": "/saqibsportfolio/static/media/HtmlLogo.0107c93943a8f415b5db64ebb0a9d12d.svg",
     "main.e91cc97a.css.map": "/saqibsportfolio/static/css/main.e91cc97a.css.map",
-    "main.839bdddb.js.map": "/saqibsportfolio/static/js/main.839bdddb.js.map",
+    "main.990c821c.js.map": "/saqibsportfolio/static/js/main.990c821c.js.map",
     "283.26d12fc5.chunk.css.map": "/saqibsportfolio/static/css/283.26d12fc5.chunk.css.map",
     "283.bce83b89.chunk.js.map": "/saqibsportfolio/static/js/283.bce83b89.chunk.js.map",
     "593.4317e157.chunk.css.map": "/saqibsportfolio/static/css/593.4317e157.chunk.css.map",
@@ -47,7 +47,7 @@
     "492.778c1b3c.chunk.css.map": "/saqibsportfolio/static/css/492.778c1b3c.chunk.css.map",
     "492.89c94fe9.chunk.js.map": "/saqibsportfolio/static/js/492.89c94fe9.chunk.js.map",
     "862.c66aaa80.chunk.css.map": "/saqibsportfolio/static/css/862.c66aaa80.chunk.css.map",
-    "862.956aabda.chunk.js.map": "/saqibsportfolio/static/js/862.956aabda.chunk.js.map",
+    "862.62e97248.chunk.js.map": "/saqibsportfolio/static/js/862.62e97248.chunk.js.map",
     "453.848906bf.chunk.js.map": "/saqibsportfolio/static/js/453.848906bf.chunk.js.map",
     "127.b39865cd.chunk.js.map": "/saqibsportfolio/static/js/127.b39865cd.chunk.js.map",
     "302.b92d8729.chunk.js.map": "/saqibsportfolio/static/js/302.b92d8729.chunk.js.map",
@@ -55,6 +55,6 @@
   },
   "entrypoints": [
     "static/css/main.e91cc97a.css",
-    "static/js/main.839bdddb.js"
+    "static/js/main.990c821c.js"
   ]
 }
