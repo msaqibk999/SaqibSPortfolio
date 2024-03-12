@@ -36,7 +36,7 @@ export default function About() {
 
   const handleDownload = async () => {
     try {
-      const documentPath = process.env.PUBLIC_URL + '/MohdSaqibResume.pdf';
+      const documentPath = process.env.PUBLIC_URL + '/SaqibsCV.pdf';
       const response = await fetch(documentPath);
       const blob = await response.blob();
       const link = document.createElement('a');
