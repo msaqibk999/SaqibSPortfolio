@@ -44,7 +44,9 @@ export default function Projects() {
             "Created the application from the ground up, utilizing a tech stack that included ReactJS, NodeJS, ExpressJS, and PostgreSQL.",
             "Ensured an impeccable user experience with seamless responsiveness across mobile, tablet, and web interfaces.",
             "Seamlessly integrated secure user authentication via JSON Web Tokens JWT, bolstering user data protection.",
-            "Integrated Firebase for user-friendly profile picture management, enabling effortless uploads and updates."
+            "Integrated Firebase for user-friendly profile picture management, enabling effortless uploads and updates.",
+            "Implemented React lazy loading to optimize page speed and enhance user experience by efficiently loading components as needed.",
+            "Enhanced scalability by integrating Node cluster, distributing traffic across multiple instances to boost performance."
           ]
           },
           {image: 'https://logolook.net/wp-content/uploads/2023/04/Swiggy-Emblem.png',
