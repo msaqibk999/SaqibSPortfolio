@@ -12,7 +12,7 @@ import {ReactComponent as RailsLogo} from '../media/skills/RailsLogo.svg'
 import {ReactComponent as JavaLogo} from '../media/skills/JavaLogo.svg'
 import {ReactComponent as AwsLogo} from '../media/skills/AwsLogo.svg'
 import {ReactComponent as DockerLogo} from '../media/skills/DockerLogo.svg'
-import {ReactComponent as GitLogo} from '../media/skills/GitLogo.svg'
+import {ReactComponent as MaterialUI} from '../media/skills/MaterialUI.svg'
 import {ReactComponent as GithubLogo} from '../media/skills/GithubLogo.svg'
 import {ReactComponent as VscodeLogo} from '../media/skills/VscodeLogo.svg'
 import { CircularProgressBar } from './CircularProgressBar'
@@ -29,13 +29,13 @@ export default function Skills() {
           <CircularProgressBar progressEndValue={85} speed={10} skill={"ReactJS"}><ReactLogo className={styles.svg}/></CircularProgressBar>
           <CircularProgressBar progressEndValue={80} speed={10} skill={"NodeJS"}><NodeLogo className={styles.svg}/></CircularProgressBar>
           <CircularProgressBar progressEndValue={85} speed={10} skill={"MySQL"}><MysqlLogo className={styles.svg}/></CircularProgressBar>
-          <CircularProgressBar progressEndValue={85} speed={10} skill={"PostgreSQL"}><PostgresLogo className={styles.svg}/></CircularProgressBar>
           <CircularProgressBar progressEndValue={85} speed={10} skill={"MongoDB"}><MongodbLogo className={styles.svg}/></CircularProgressBar>
+          <CircularProgressBar progressEndValue={85} speed={10} skill={"PostgreSQL"}><PostgresLogo className={styles.svg}/></CircularProgressBar>
           <CircularProgressBar progressEndValue={85} speed={10} skill={"Java"}><JavaLogo className={styles.svg}/></CircularProgressBar>
           <CircularProgressBar progressEndValue={70} speed={10} skill={"Rails"}><RailsLogo className={styles.svg}/></CircularProgressBar>
+          <CircularProgressBar progressEndValue={80} speed={10} skill={"MaterialUI"}><MaterialUI className={styles.svg}/></CircularProgressBar>
           <CircularProgressBar progressEndValue={70} speed={10} skill={"AWS"}><AwsLogo className={styles.svg}/></CircularProgressBar>
           <CircularProgressBar progressEndValue={70} speed={10} skill={"Docker"}><DockerLogo className={styles.svg}/></CircularProgressBar>
-          <CircularProgressBar progressEndValue={95} speed={10} skill={"Git"}><GitLogo className={styles.svg}/></CircularProgressBar>
           <CircularProgressBar progressEndValue={95} speed={10} skill={"Github"}><GithubLogo className={styles.svg}/></CircularProgressBar>
           <CircularProgressBar progressEndValue={95} speed={10} skill={"VS Code"}><VscodeLogo className={styles.svg}/></CircularProgressBar>
         </div>

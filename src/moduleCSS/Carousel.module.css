@@ -1,68 +1,70 @@
-.carousel{
-    margin-top: 4rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.carousel {
+  margin-top: 4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.mainContainer{
-    background-color: transparent;
-    position: relative;
-    overflow: hidden;
-    width: 40%;
-    height: 100%;
+.mainContainer {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  width: 40%;
+  height: 100%;
 }
 
-
-.container{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.slide{
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.btn{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    color: var(--body-color);
-    background-color: transparent;
-    font-size: 3rem;
-    cursor: pointer;
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  color: var(--body-color);
+  background-color: transparent;
+  font-size: 3rem;
+  cursor: pointer;
 }
 
-.btn:hover{
-    transition: 0.3s ease-in-out;
-    color: #FFB400;
+.btn:hover {
+  transition: 0.3s ease-in-out;
+  color: #ffb400;
 }
 
-.before{
-    left: 25%;
+.before {
+  left: 25%;
 }
 
-.after{
-    right: 25%;
+.after {
+  right: 25%;
 }
 
-@media screen and (max-width:1000px) {
-    .btn{
-        font-size: 2rem;
-    }
-    .before{
-        left: 27%;
-    }
-    
-    .after{
-        right: 27%;
-    }
+@media screen and (max-width: 800px) {
+  .mainContainer {
+    width: 20%;
+  }
+  .btn {
+    font-size: 2rem;
+  }
+  .before {
+    left: 34%;
+  }
+
+  .after {
+    right: 34%;
+  }
 }

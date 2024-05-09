@@ -1,14 +1,14 @@
-.container{
-    height: 9rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
+.container {
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
-.container:hover{
-    transform: scale(1.1);
+.container:hover {
+  transform: scale(1.1);
 }
 .circular_progress {
   position: relative;
@@ -32,25 +32,24 @@
   font-size: 50px;
   color: #231c3d;
 }
-.name{
-    color: var(--body-color);
+.name {
+  color: var(--body-color);
 }
-.percentage{
-    color: #FFB400;
+.percentage {
+  color: #ffb400;
 }
-
 
 @media screen and (max-width: 540px) {
-    .circular_progress{
-        height: 4.5rem;
-        width: 4.5rem;
-    }
-    .container{
-        height: 8rem;
-    }
-    .info{
-        display: flex;
-        flex-direction: column;
-        font-size: 0.9rem;
-    }
+  .circular_progress {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+  .container {
+    height: 8rem;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
 }

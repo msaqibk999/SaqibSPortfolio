@@ -1,166 +1,166 @@
-.mainContainer{
-    display: flex;
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 5.5rem 1rem;
+}
+
+.subContainer {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.animeContainer {
+  height: 30rem;
+  flex: 1;
+  overflow: hidden;
+}
+
+.heading {
+  color: #ffb400;
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.heading::before {
+  content: "EDUCATION";
+  position: absolute;
+  width: 150%;
+  height: 5rem;
+  background-color: transparent;
+  z-index: -1;
+  font-size: 7rem;
+  opacity: 0.1;
+  left: 25%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  flex: 1;
+  margin-top: 1rem;
+}
+
+.edu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-left: 2px solid #ffb400;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  color: var(--body-color);
+}
+
+.circle {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color: #ffb400;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  left: -1.3rem;
+  top: -1rem;
+}
+
+.edu span {
+  font-size: 1.15rem;
+}
+
+.edu li {
+  font-size: 1.1rem;
+}
+
+.edu:hover .date {
+  transition: 0.3s ease-in-out;
+  color: #ffb400;
+}
+
+.edu:hover .circle {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.2);
+}
+
+.date {
+  position: absolute;
+  top: -0.6rem;
+  font-size: 1.3rem;
+  display: flex;
+  left: 0;
+  color: var(--body-color-secondary);
+}
+
+.date hr {
+  width: 6rem;
+  background-color: #ffb400;
+  border: none;
+  margin-right: 1rem;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1000px) {
+  .mainContainer {
+    padding: 3.5rem 1rem;
+  }
+  .heading {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .heading::before {
+    height: 3rem;
+    font-size: 3.2rem;
+    left: 34%;
+    top: 31%;
+  }
+  .subContainer {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    flex-direction: column;
-    overflow: hidden;
-    box-sizing: border-box;
-    padding: 5.5rem 1rem;
-}
-
-.subContainer{
-    display: flex;
-    margin-top: 1rem;
-}
-
-.animeContainer{
-    height: 30rem;
-    flex: 1;
-    overflow: hidden;
-}
-
-.heading{
-    color: #FFB400;
-    font-size: 4rem;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.heading::before{
-    content: 'EDUCATION';
-    position: absolute;
-    width: 150%; 
-    height: 5rem; 
-    background-color: transparent; 
-    z-index: -1;
-    font-size: 7rem;
-    opacity: 0.1;
-    left: 25%;
-    top: 15%;
-    transform: translate(-50%, -50%);
-}
-
-.info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    flex: 1;
-    margin-top: 1rem;
-}
-
-.edu{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-left: 2px solid #FFB400;
-    padding: 2rem;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    color: var(--body-color);
-}
-
-.circle{
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    background-color: #FFB400;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1rem;
-    left: -1.3rem;
-    top: -1rem;
-}
-
-.edu span{
-    font-size: 1.15rem;
-}
-
-.edu li{
+  }
+  .animeContainer {
+    width: 18rem;
+    margin-top: 1.5rem;
+  }
+  .edu {
+    padding: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  .edu h1 {
     font-size: 1.1rem;
-}
-
-.edu:hover .date{
-    transition: 0.3s ease-in-out;
-    color: #FFB400;
-}
-
-.edu:hover .circle{
-    transition: 0.3s ease-in-out;
-    transform: scale(1.2);
-}
-
-.date{
-    position: absolute;
-    top: -0.6rem;
-    font-size: 1.3rem;
-    display: flex;
-    left: 0;
-    color: var(--body-color-secondary);
-}
-
-.date hr{
-    width: 6rem;
-    background-color: #FFB400;
-    border: none;
-    margin-right: 1rem;
-    z-index: -1;
-}
-
-@media screen and (max-width:1000px) {
-    .mainContainer{
-        padding: 3.5rem 1rem;
-    }
-    .heading{
-        margin: 0;
-        font-size: 2rem;
-    }
-    .heading::before{
-        height: 3rem; 
-        font-size: 3.2rem;
-        left: 34%;
-        top: 31%;
-    }
-    .subContainer{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .animeContainer{
-        width: 18rem;
-        margin-top: 1.5rem;
-    }
-    .edu{
-        padding: 1.5rem;
-        margin-left: 1.5rem;
-    }
-    .edu h1{
-        font-size: 1.1rem;
-    }
-    .edu span{
-        font-size: 1rem;
-    }
-    .edu li{
-        font-size: 0.9rem;
-    }
-    .date{
-        font-size: 1rem;
-    }
-    .date hr{
-        width: 3rem;
-    }
-    .circle{
-        width: 2rem;
-        height: 2rem;
-        left: -1rem;
-    }
+  }
+  .edu span {
+    font-size: 1rem;
+  }
+  .edu li {
+    font-size: 0.9rem;
+  }
+  .date {
+    font-size: 1rem;
+  }
+  .date hr {
+    width: 3rem;
+  }
+  .circle {
+    width: 2rem;
+    height: 2rem;
+    left: -1rem;
+  }
 }
