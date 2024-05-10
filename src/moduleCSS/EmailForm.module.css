@@ -4,9 +4,21 @@
   justify-content: space-between;
   width: 40%;
 }
+
 .formSection {
   display: flex;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.errorMsg {
+  position: absolute;
+  left: 7rem;
+  top: 80%;
+  color: red;
+  font-weight: 800;
+  font-size: 0.9rem;
+  background-color: var(--body-background);
+  padding: 0 0.2rem;
 }
 .label {
   width: 7.5rem;
@@ -24,8 +36,8 @@
 .textArea {
   padding: 0.8rem 0.4rem;
   width: 100%;
-  background-color: var(--body-color-primary);
-  border: none;
+  border: 2px solid var(--body-color-primary);
+  background-color: var(--body-background);
   border-radius: 5px;
   font-size: 1.1rem;
   color: var(--body-color);
@@ -33,13 +45,13 @@
 .textArea {
   resize: none;
   height: 8rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.7rem;
 }
 .btnLoader {
   display: flex;
   justify-self: center;
   align-items: center;
-  height: 3.2rem;
+  height: 3.24rem;
   background-color: #ffb400;
   width: 100%;
   border-radius: 2rem;
@@ -48,20 +60,23 @@
   height: 3rem;
   width: 100%;
 }
+.checkContainer {
+  height: 2rem;
+  width: 100%;
+}
 .submitBtnWrapper {
   position: relative;
-  display: flex;
   width: 100%;
   overflow: hidden;
   border-radius: 2rem;
 }
 .submitBtn {
   width: 100%;
+  height: 3.24rem;
   background-color: transparent;
-  padding: 0.8rem 0;
   border: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   border-radius: 2rem;
   color: var(--body-color);
   border: 3px solid #ffb400;
@@ -69,6 +84,14 @@
   cursor: pointer;
   transition: background-position 0.3s ease-in-out;
   overflow: hidden;
+}
+
+.submitBtn:hover {
+  font-size: 1.8rem;
+}
+
+.submitBtn:focus {
+  font-size: 1.2rem;
 }
 
 .submitBtnWrapper::before {
@@ -93,18 +116,26 @@
   color: white;
 }
 
+.error {
+  border: 2px solid red;
+}
+
 @media screen and (max-width: 1024px) {
   .form {
     width: 80%;
   }
   .formSection {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.7rem;
   }
 }
 
 @media screen and (max-width: 500px) {
   .form {
     width: 100%;
+  }
+  .errorMsg {
+    left: 6rem;
+    font-size: 0.8rem;
   }
   .label,
   .input,
