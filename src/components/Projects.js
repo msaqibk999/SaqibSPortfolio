@@ -68,6 +68,32 @@ export default function Projects() {
       ],
     },
     {
+      image: "https://cdn-icons-png.flaticon.com/512/1486/1486433.png",
+      display_name: "<Form Builder/>",
+      techs: [react],
+      name: "Form Builder",
+      link: "https://form-builder-2o7.pages.dev/",
+      desc: '"Form Builder", is a Dynamic Form Generator like Google Forms',
+      info: [
+        "Developed the application from scratch, leveraging ReactJS for efficient and scalable form generation.",
+        "Implemented advanced optimizations and validation techniques, improving performance and enhancing form handling capabilities.",
+        "Delivered a seamless, responsive design, ensuring a smooth user experience across mobile, tablet, and desktop platforms.",
+      ],
+    },
+    {
+      image: "https://i.pinimg.com/originals/ae/2e/56/ae2e5651b74a00d5d31b8c6453fa3ebb.png",
+      display_name: "<Astrix/>",
+      techs: [react],
+      name: "Astrix",
+      link: "https://event-poster.pages.dev/",
+      desc: '"Astrix", is a "Cool" event poster built on ReactJS',
+      info: [
+        "Developed the application from scratch, leveraging ReactJS.",
+        "Added beautiful animations using keyframes",
+        "Delivered a seamless, responsive design, ensuring a smooth user experience across mobile, tablet, and desktop platforms.",
+      ],
+    },
+    {
       image: "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
       display_name: "<Job Listings/>",
       techs: [react, meterialUi, redux],
@@ -79,7 +105,7 @@ export default function Projects() {
         "Ensured an impeccable user experience with seamless responsiveness across mobile, tablet, and web interfaces.",
         "Implemented various optimizations like debouncing handled filtering most optimally",
       ],
-    },
+    }
   ];
 
   const items = keysArray.map((item, index) => (
